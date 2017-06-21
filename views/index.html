@@ -1,0 +1,425 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   
+	<meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" type="text/css">
+
+    <!-- Page title -->
+    <title>Extrato Publico</title>
+
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/style.css">
+    <style type="text/css">
+        .jqstooltip {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            visibility: hidden;
+            background: rgb(0, 0, 0) transparent;
+            background-color: rgba(0,0,0,0.6);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+            white-space: nowrap;
+            padding: 5px;
+            border: 1px solid white;
+            z-index: 10000;
+        }
+
+        .jqsfield {
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+        }
+    </style>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <!--<script type="text/javascript">
+
+
+          // carregando bibliotecas do google
+          google.load('visualization', '1', {'packages':['corechart']});
+          google.setOnLoadCallback(desenhaGrafico);
+
+          // dados de abril
+             data.setValue(3, 0, 'Abril');
+             function desenhaGrafico() {
+                 var data = new google.visualization.DataTable();
+                 data.addColumn('string', 'Mês');
+                 data.addColumn('number', 'Gastos em R$');
+
+                 data.addRows(5);
+
+                 // dados de janeiro
+                 data.setValue(0, 0, 'Janeiro');
+                 data.setValue(0, 1, 20450.0);
+                 // dados de fevereiro
+                 data.setValue(1, 0, 'Fevereiro');
+                 data.setValue(1, 1, 21870.0);
+                 // dados de marco
+                 data.setValue(2, 0, 'Março');
+                 data.setValue(2, 1, 22250.0);
+                 data.setValue(3, 1, 21769.0);
+             // dados de maio
+             data.setValue(4, 0, 'Maio');
+             data.setValue(4, 1, 23234.0);
+
+             // cria grafico
+             var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+             // desenha grafico de 400x240 com titulo especificado
+             chart.draw(data, { width: 400, height: 240, title: 'Gastos do mês' });   
+    
+         }
+    </script>-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { packages: ['corechart', 'bar'] });
+        google.charts.setOnLoadCallback(drawAnnotations);
+
+        function drawAnnotations() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('timeofday', 'Time of Day');
+            data.addColumn('number', 'Motivation Level');
+            data.addColumn({ type: 'string', role: 'annotation' });
+            data.addColumn('number', 'Energy Level');
+            data.addColumn({ type: 'string', role: 'annotation' });
+
+            data.addRows([
+              [{ v: [8, 0, 0], f: '8 am' }, 1, '1', .25, '.2'],
+              [{ v: [9, 0, 0], f: '9 am' }, 2, '2', .5, '.5'],
+              [{ v: [10, 0, 0], f: '10 am' }, 3, '3', 1, '1'],
+              [{ v: [11, 0, 0], f: '11 am' }, 4, '4', 2.25, '2'],
+              [{ v: [12, 0, 0], f: '12 pm' }, 5, '5', 2.25, '2'],
+              [{ v: [13, 0, 0], f: '1 pm' }, 6, '6', 3, '3'],
+              [{ v: [14, 0, 0], f: '2 pm' }, 7, '7', 3.25, '3'],
+              [{ v: [15, 0, 0], f: '3 pm' }, 8, '8', 5, '5'],
+              [{ v: [16, 0, 0], f: '4 pm' }, 9, '9', 6.5, '6'],
+              [{ v: [17, 0, 0], f: '5 pm' }, 10, '10', 10, '10'],
+            ]);
+
+            var options = {
+                title: 'Motivation and Energy Level Throughout the Day',
+                annotations: {
+                    alwaysOutside: true,
+                    textStyle: {
+                        fontSize: 14,
+                        color: '#000',
+                        auraColor: 'none'
+                    }
+                },
+                hAxis: {
+                    title: 'Time of Day',
+                    format: 'h:mm a',
+                    viewWindow: {
+                        min: [7, 30, 0],
+                        max: [17, 30, 0]
+                    }
+                },
+                vAxis: {
+                    title: 'Rating (scale of 1-10)'
+                }
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+
+</head>
+<body>
+
+    <body class="pace-done">
+        <div class="pace  pace-inactive">
+            <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+                <div class="pace-progress-inner"></div>
+            </div>
+            <div class="pace-activity"></div>
+        </div>
+
+        <!-- Wrapper-->
+        <div class="wrapper">
+
+            <!-- Header-->
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <div id="mobile-menu">
+                            <div class="left-nav-toggle">
+                                <a href="#">
+                                    <i class="stroke-hamburgermenu"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <a class="navbar-brand" href="index.html">
+                            LOGO IMG
+                        </a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <div class="left-nav-toggle">
+                            <a href="">
+                                <i class="stroke-hamburgermenu">Esconder Menu</i>
+                            </a>
+                        </div>
+                     </div>
+                </div>
+            </nav>
+            <!-- End header-->
+            <!-- Navigation-->
+            <aside class="navigation">
+                <nav>
+                    <ul class="nav luna-nav">
+                        <li class="nav-category">
+                            Menu
+                        </li>
+                        <li class="active">
+                            <a href="index.html">Painel de Gastos</a>
+                        </li>
+
+                       
+                        <li>
+                            <a href="#">
+                                Conheça o Projeto
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="versions.html">
+                                Entre em contato Conosco
+                            </a>
+                        </li>
+                        <li class="nav-info">
+                            <i class="pe pe-7s-shield text-accent"></i>
+
+                            <div class="m-t-xs">
+                                <span class="c-white">Extrato Público</span> é uma interface de demonstração dos gastos públicos.
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <!-- End navigation-->
+            <!-- Main content-->
+            <section class="content">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="view-header">
+                                <div class="pull-right text-right" style="line-height: 14px">
+                                    <small>Dados Públicos<br>Use Nossa<br> <span class="c-white"><a href="#">API</a></span></small>
+                                </div>
+                                <div class="header-icon">
+                                    <i class="pe page-header-icon pe-7s-shield"></i>
+                                </div>
+                                <div class="header-title">
+                                    <h3 class="m-b-xs">Extrato Público</h3>
+                                    <small>
+                                        Analise, investigue, confira os gastos de seu representante politíco.
+                                    </small>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-4 col-xs-12">
+                            <div class="panel panel-filled">
+
+                                <div class="panel-body">
+                                    <h2 class="m-b-none">
+                                        R$ 15.512.065,80
+                                    </h2>
+                                    <div class="small">Valor Total dos 55 Gabinetes</div>
+                                    <div class="slight m-t-sm"><i class="fa fa-clock-o"> </i> Ano Base: <span class="c-white">2017</span>  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-xs-12">
+                            <div class="panel panel-filled">
+
+                                <div class="panel-body">
+                                    <h2 class="m-b-none">
+                                        R$ 282.037,56
+                                    </h2>
+                                    <div class="small">Valor Individual por Vereador</div>
+                                    <div class="slight m-t-sm"><i class="fa fa-clock-o"> </i> Ano Base: <span class="c-white">2017</span>  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-xs-12">
+                            <div class="panel panel-filled">
+                                <div class="panel-body">
+                                    <h2 class="m-b-none">
+                                        R$ 23.503,13
+                                    </h2>
+                                    <div class="small">Media Mensal Individual</div>
+                                    <div class="slight m-t-sm"><i class="fa fa-clock-o"> </i> Ano Base: <span class="c-white">2017</span> </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-12 col-xs-12">
+                            <div class="panel panel-filled">
+                                <div class="panel-body">
+                                    <h2 class="m-b-none" style="text-align:center;">
+                                        Como cada Vereador pode gastar esse dinheiro ?
+                                    </h2><br />
+                                    <p style="text-align:center;">Cada vereador dispõe também de uma verba anual de até R$ 282.037,56 (média mensal de R$ 23.503,13) destinado ao custeio de serviços gráficos, correios, assinaturas de jornais, deslocamentos por toda a cidade e materiais de escritório, entre outras despesas</p>
+
+                                    <div class="slight m-t-sm" style="text-align:right"> <span class="c-white"><a href="about.html">Saiba mais sobre as verbas de cada vereador</a></span> </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-12">
+                            <div class="panel panel-filled">
+                                <div class="row">
+                                   <!-- <div class="col-lg-4">
+
+                                        <div class="panel-body h-200 list">
+                                            <div class="stats-title pull-left">
+                                                <h4>Gastos até a data atual</h4>
+                                            </div>
+                                            <div class="m-t-xl">
+                                                <small>
+                                                    Este gráfico mostra os gastos dos Vereadores de São Paulo do início de 2017 até a data atual.
+                                                </small>
+                                            </div>
+
+
+                                            <div class="progress m-t-xs full progress-small">
+                                                <div style="width: 65%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="35" role="progressbar" class=" progress-bar progress-bar-warning">
+                                                    <span class="sr-only">56% Complete (success)</span>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <small class="stat-label">Gasto até hoje</small>
+                                                    <h4 class="m-t-xs">65,00% <i class="fa fa-level-down c-white"></i></h4>
+                                                </div>
+                                                <div class="col-lg-10">
+                                                    <small class="stat-label">Total disponível</small>
+                                                    <h4 class="m-t-xs">15.512.065,80 <i class="fa fa-level-up text-warning"></i></h4>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                    <div class="col-md-11">
+                                        <div class="panel-body">
+                                            <div class="text-center slight">
+                                            </div>
+
+
+
+                                            <div id="chart_div"></div>
+
+                                            <!--<div class="chart_div" style="height: 160px;margin-top: 5px">
+                                    <div class="flot-chart-content" id="flot-line-chart" style="padding: 0px; position: relative;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 284px; height: 160px;" width="284" height="160"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 57px; top: 144px; left: 14px; text-align: center;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 46px; top: 144px; left: 51px; text-align: center;">1</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 57px; top: 144px; left: 88px; text-align: center;">2</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 46px; top: 144px; left: 125px; text-align: center;">3</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 57px; top: 144px; left: 162px; text-align: center;">4</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 46px; top: 144px; left: 199px; text-align: center;">5</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 57px; top: 144px; left: 236px; text-align: center;">6</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 46px; top: 144px; left: 273px; text-align: center;">7</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 131px; left: 6px; text-align: right;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 98px; left: 0px; text-align: right;">20</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 66px; left: 0px; text-align: right;">40</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 33px; left: 0px; text-align: right;">60</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 0px; left: 0px; text-align: right;">80</div></div></div><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 284px; height: 160px;" width="284" height="160"></canvas></div>
+                                </div>-->
+
+                                            <div class="small text-center">All active users from last month.</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="panel">
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Phone</th>
+                                                    <th>Street Address</th>
+                                                    <th>% Share</th>
+                                                    <th>City</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Abraham</td>
+                                                    <td>076 9477 4896</td>
+                                                    <td>294-318 Duis Ave</td>
+                                                    <td><div class="sparkline8"><canvas width="17" height="17" style="display: inline-block; width: 17px; height: 17px; vertical-align: top;"></canvas></div> </td>
+                                                    <td>Vosselaar</td>
+                                                    <td><a href="#" class="btn btn-default btn-xs">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Phelan</td>
+                                                    <td>0500 034548</td>
+                                                    <td>680-1097 Mi Rd.</td>
+                                                    <td><div class="sparkline10"><canvas width="17" height="17" style="display: inline-block; width: 17px; height: 17px; vertical-align: top;"></canvas></div></td>
+                                                    <td>Lavoir</td>
+                                                    <td><a href="#" class="btn btn-default btn-xs active">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Raya</td>
+                                                    <td>(01315) 27698</td>
+                                                    <td>Ap #289-8161 In Avenue</td>
+                                                    <td><div class="sparkline11"><canvas width="17" height="17" style="display: inline-block; width: 17px; height: 17px; vertical-align: top;"></canvas></div></td>
+                                                    <td>Santomenna</td>
+                                                    <td><a href="#" class="btn btn-default btn-xs">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Azalia</td>
+                                                    <td>0500 854198</td>
+                                                    <td>226-4861 Augue. St.</td>
+                                                    <td><div class="sparkline12"><canvas width="17" height="17" style="display: inline-block; width: 17px; height: 17px; vertical-align: top;"></canvas></div></td>
+                                                    <td>Newtown</td>
+                                                    <td><a href="#" class="btn btn-default btn-xs">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Garth</td>
+                                                    <td>(01662) 59083</td>
+                                                    <td>3219 Elit Avenue</td>
+                                                    <td><div class="sparkline13"><canvas width="17" height="17" style="display: inline-block; width: 17px; height: 17px; vertical-align: top;"></canvas></div></td>
+                                                    <td>Ternitz</td>
+                                                    <td><a href="#" class="btn btn-default btn-xs">View</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </section>
+            <!-- End main content-->
+
+        </div>
+        <!-- End wrapper-->
+    
+
+</body>
+</html>
