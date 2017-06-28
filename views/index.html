@@ -394,11 +394,11 @@
                         <div class="col-lg-12">
                             <div class="panel panel-filled">
                                 <div class="row">
-                                    <div class="col-md-11">
+                                    <div class="col-md-12">
                                         <div class="panel-body">
-                                            <div class="text-center slight">
-                                            </div>
-                                            <div id="chart_div"></div>
+                                           
+
+                                            <div id="chart_div" class="col-xs-12 col-lg-12" style="height: 300px"></div>
                                             <div class="small text-center">All active users from last month.</div>
                                             <div class="panel-body">
                                                 <p style="text-align:center;">Cada vereador dispõe também de uma verba anual de até R$ 282.037,56 (média mensal de R$ 23.503,13) destinado ao custeio de serviços gráficos, correios, assinaturas de jornais, deslocamentos por toda a cidade e materiais de escritório, entre outras despesas</p>
@@ -408,18 +408,19 @@
                                     </div>
                                 </div>
                             </div>
-                                <div class="panel panel-filled">
+                                <div class="panel panel-filled text-center">
                                     <div class="row">
-                                        <div class="col-md-11">
-                                            <div id="chart_hot" style="width: 40%; height: 500px; float:left;">                                             
+                                        <div class="col-md-12 col-xs-12">
+                                            <div id="chart_hot" style="height: 500px;" class="col-md-6 col-xs-11">                                             
                                             </div>
-                                               <div id="chart_cnpj" style="width: 40%; height: 500px; float:left; text-align:right;">                                                                                                 
+                                               <div id="chart_cnpj" style="height: 500px;" class="col-md-6 col-xs-11">                                                                                                 
                                                 </div>
-                                            <div class="panel-body" style="width: 40%;float:left">
+                                            
+                                            <div class="col-md-6 col-xs-12">
                                                 <p style="text-align:center;">Cada vereador dispõe também de uma verba anual de até R$ 282.037,56 (média mensal de R$ 23.503,13) destinado ao custeio de serviços gráficos, correios, assinaturas de jornais, deslocamentos por toda a cidade e materiais de escritório, entre outras despesas</p>
                                                 <div class="slight m-t-sm" style="text-align:right"> <span class="c-white"><a href="about.html">Saiba mais sobre as verbas de cada vereador</a></span> </div>
                                             </div>
-                                            <div class="panel-body" style="width: 40%;float:left">
+                                            <div class="col-md-6 col-xs-12">
                                                 <p style="text-align:center;">Cada vereador dispõe também de uma verba anual de até R$ 282.037,56 (média mensal de R$ 23.503,13) destinado ao custeio de serviços gráficos, correios, assinaturas de jornais, deslocamentos por toda a cidade e materiais de escritório, entre outras despesas</p>
                                                 <div class="slight m-t-sm" style="text-align:right"> <span class="c-white"><a href="about.html">Saiba mais sobre as verbas de cada vereador</a></span> </div>
                                             </div>
@@ -431,19 +432,87 @@
                             
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="panel">
-                                <div class="panel-body">
-                                    <div id="table_div"></div>
+                <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                        <div class="panel">
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Nome</th>
+                                                <th>Departamento</th>
+                                                <th>Centro de Custo</th>
+                                                <th>Código</th>
+                                                <th>Fornecedor</th>
+                                                <th>CNPJ</th>
+                                                <th>Ano</th>
+                                                <th>Mês</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Fernando Fidelis</td>
+                                                <td>Gabinete do Vereador</td>
+                                                <td>Gasolina</td>
+                                                <td>222</td>
+                                                <td><a href="#">Auto Posto</a></td>
+                                                <td>50.176.288/0001-28</td>
+                                                <td>2017</td>
+                                                <td>Fevereiro</td>
+                                                <td>R$ 5.000,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fernando Fidelis</td>
+                                                <td>Gabinete do Vereador</td>
+                                                <td>Gasolina</td>
+                                                <td>222</td>
+                                                <td><a href="#">Auto Posto</a></td>
+                                                <td>50.176.288/0001-28</td>
+                                                <td>2017</td>
+                                                <td>Fevereiro</td>
+                                                <td>R$ 5.000,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fernando Fidelis</td>
+                                                <td>Gabinete do Vereador</td>
+                                                <td>Gasolina</td>
+                                                <td>222</td>
+                                                <td><a href="#">Auto Posto</a></td>
+                                                <td>50.176.288/0001-28</td>
+                                                <td>2017</td>
+                                                <td>Fevereiro</td>
+                                                <td>R$ 5.000,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fernando Fidelis</td>
+                                                <td>Gabinete do Vereador</td>
+                                                <td>Gasolina</td>
+                                                <td>222</td>
+                                                <td><a href="#">Auto Posto</a></td>
+                                                <td>50.176.288/0001-28</td>
+                                                <td>2017</td>
+                                                <td>Fevereiro</td>
+                                                <td>R$ 5.000,00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="col-lg-12" style="text-align:right">
+                                        <button type="button" class="btn btn-default btn-xs">?</button>
+                                        <button type="button" class="btn btn-default btn-xs"><</button>
+                                        <button type="button" class="btn btn-default btn-xs">></button>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-
-                        </div>
+                    </div>
+                    <div class="col-md-4">
 
                     </div>
+
+                </div>
                 </div>
                 </div>
             </section>
